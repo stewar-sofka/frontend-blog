@@ -1,6 +1,7 @@
+import { Box } from '@chakra-ui/react'
 
 export const About = (): JSX.Element => {
   return (
-    <div>About</div>
+    <Box bgColor='red.500'>About</Box>
   )
 }

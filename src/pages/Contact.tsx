@@ -1,6 +1,7 @@
+import { Box } from '@chakra-ui/react'
 
 export const Contact = (): JSX.Element => {
   return (
-    <div>Contact</div>
+    <Box bgColor='red.500'>Contact</Box>
   )
 }

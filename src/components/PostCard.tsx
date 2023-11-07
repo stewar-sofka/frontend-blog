@@ -15,7 +15,7 @@ export const PostCard = ({
   tags
 }: PostCardProps): JSX.Element => {
   return (
-    <Card size='sm' backgroundColor={appColors.LIGHT_TONE} maxW='400px' m={2} rounded='lg' cursor='pointer'>
+    <Card size='sm' backgroundColor={appColors.LIGHT_TONE} maxW='400px' m={2} rounded='lg' cursor='pointer' boxShadow='lg'>
       <CardBody>
         <Image src={img} alt='alt of image' rounded='lg' />
         <Heading size='md' textTransform='uppercase' color={typographyColors.SECONDARY_COLOR}>

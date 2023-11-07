@@ -1,6 +1,6 @@
 import { Heading, Image, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import { PostCard } from '../components/PostCard'
-import { typographyColors } from '../constants/theme/colors'
+import { appColors, typographyColors } from '../constants/theme/colors'
 import Hero from '../images/blogplatform.webp'
 
 export const Home = (): JSX.Element => {
@@ -20,7 +20,7 @@ export const Home = (): JSX.Element => {
 
       <Image src={Hero} alt='Hero image' height='400px' width='100%' fit='scale-down' />
 
-      <SimpleGrid minChildWidth='300px' justifyItems='center'>
+      <SimpleGrid minChildWidth='300px' justifyItems='center' bgColor={appColors.MAIN_COLOR}>
         <PostCard
           img='https://beconnected.esafety.gov.au/pluginfile.php/52815/mod_resource/content/12/fake-news-hero-img.jpg'
           title='Title 1'

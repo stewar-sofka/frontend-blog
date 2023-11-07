@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react'
 import { appColors, typographyColors } from '../constants/theme/colors'
+import { Link } from 'react-router-dom'
 
 export const Navbar = (): JSX.Element => {
   return (
@@ -26,6 +27,8 @@ export const Navbar = (): JSX.Element => {
         </Flex>
         <Flex alignItems='center'>
           <Heading
+            as={Link}
+            to='/'
             size='sm'
             p={2}
             cursor='pointer'
@@ -37,6 +40,8 @@ export const Navbar = (): JSX.Element => {
             Home
           </Heading>
           <Heading
+            as={Link}
+            to='/about'
             size='sm'
             p={2}
             cursor='pointer'
@@ -48,6 +53,8 @@ export const Navbar = (): JSX.Element => {
             About
           </Heading>
           <Heading
+            as={Link}
+            to='/contact'
             size='sm'
             p={2}
             cursor='pointer'

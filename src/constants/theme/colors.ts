@@ -8,4 +8,5 @@ export enum appColors {
 export enum typographyColors {
   MAIN_COLOR = '#FFF',
   SECONDARY_COLOR = '#001038',
+  TERTIARY_COLOR = '#ededed',
 }

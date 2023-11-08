@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 type useFormResult = [
   state: any,
-  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void,
   reset: () => void
 ]
 
@@ -13,7 +13,7 @@ export const useForm = (initialState = {}): useFormResult => {
     setState(initialState)
   }
 
-  const handleInputChange = ({ target }: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleInputChange = ({ target }: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
     setState({
       ...state,
       [target.name]: target.value

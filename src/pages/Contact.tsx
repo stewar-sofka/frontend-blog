@@ -12,8 +12,6 @@ import { useState } from 'react'
 export const Contact = (): JSX.Element => {
   const [name, setName] = useState<string>('')
 
-  console.log(name)
-
   return (
     <Box bgColor='white' maxWidth='600px' display='block' m='0 auto'>
       <Heading size='lg' textAlign='center' mb={3} textTransform='uppercase'>Contact us</Heading>

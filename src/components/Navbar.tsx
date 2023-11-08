@@ -10,6 +10,7 @@ export const Navbar = (): JSX.Element => {
         appColors.MAIN_COLOR
       )}
       minHeight='50px'
+      p='0 2ch'
     >
       <Flex justifyContent='space-between'>
         <Flex>

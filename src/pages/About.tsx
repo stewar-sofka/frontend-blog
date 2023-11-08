@@ -4,7 +4,7 @@ import { appColors } from '../constants/theme/colors'
 export const About = (): JSX.Element => {
   return (
     <Box
-      bgGradient={`linear(to-b, white 50%, ${appColors.MAIN_COLOR} 90%)`}
+      bgGradient={`linear(to-b, white 50%, ${appColors.MAIN_COLOR} 100%)`}
       display='block'
       maxW='600px'
       m='auto'

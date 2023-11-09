@@ -8,6 +8,7 @@ import {
   Textarea
 } from '@chakra-ui/react'
 import { useForm } from '../hooks/useForm'
+import { appColors } from '../constants/theme/colors'
 
 export const Contact = (): JSX.Element => {
   const [state, handleInputChange] = useForm({
@@ -19,7 +20,7 @@ export const Contact = (): JSX.Element => {
 
   return (
     <Box
-      bgColor='white'
+      bgGradient={`linear(to-b, white 50%, ${appColors.MAIN_COLOR} 100%)`}
       maxWidth='600px'
       display='block'
       m='auto auto'

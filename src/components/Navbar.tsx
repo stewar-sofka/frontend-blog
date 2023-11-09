@@ -1,8 +1,16 @@
-import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { appColors, typographyColors } from '../constants/theme/colors'
 import { Link } from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react'
 
 export const Navbar = (): JSX.Element => {
+  const { logout, isAuthenticated, loginWithPopup } = useAuth0()
   return (
     <Box
       backgroundColor={useColorModeValue(
@@ -66,6 +74,42 @@ export const Navbar = (): JSX.Element => {
           >
             Contact
           </Heading>
+          {/* LOGOUT */}
+          {isAuthenticated
+            ? (
+              <Heading
+                as={Button}
+                onClick={() => logout().then}
+                size='sm'
+                p={2}
+                cursor='pointer'
+                color={useColorModeValue(
+                  typographyColors.MAIN_COLOR,
+                  typographyColors.SECONDARY_COLOR
+                )}
+                bg='none'
+                _hover={{ bg: 'none' }}
+              >
+                Log out
+              </Heading>
+              )
+            : (
+              <Heading
+                as={Button}
+                onClick={() => loginWithPopup().then}
+                size='sm'
+                p={2}
+                cursor='pointer'
+                color={useColorModeValue(
+                  typographyColors.MAIN_COLOR,
+                  typographyColors.SECONDARY_COLOR
+                )}
+                bg='none'
+                _hover={{ bg: 'none' }}
+              >
+                Log in
+              </Heading>
+              )}
         </Flex>
       </Flex>
     </Box>
